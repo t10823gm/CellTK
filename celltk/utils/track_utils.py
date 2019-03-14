@@ -1,7 +1,10 @@
 from __future__ import division
 import numpy as np
-from munkres import munkres
 from scipy.spatial.distance import cdist
+try:
+    from munkres import munkres
+except:
+    from _munkres import munkres
 
 
 def calc_ratiodiff(a, b):

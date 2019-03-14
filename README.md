@@ -101,10 +101,25 @@ For visualization and manipulation of these arrays, I recommend to take a loot a
 
 ## Install dependencies
 
-Due to the priority issue, install with the following command:
+
+If you do not need a dev version, simply
 ```
-cat requirements.txt | xargs -n 1 pip install
+pip install celltk
 ```
+This will register `celltk` command, where you can pass input file like `celltk input_file/input_tests1.yml`.
+___________________________
+
+It is compatible with [poetry](https://github.com/sdispater/poetry). 
+```
+git clone https://github.com/braysia/CellTK.git & cd CellTK
+pip install poetry
+poetry install
+```
+Install the additional package may speed up computation.
+```
+pip install git+https://github.com/jfrelinger/cython-munkres-wrapper
+```
+_________
 
 The other option is to use Docker container.
 ```
